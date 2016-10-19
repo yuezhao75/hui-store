@@ -1,0 +1,37 @@
+{
+  "name": "hui-store",
+  "version": "1.0.0",
+  "description": "hui store",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --colors",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuezhao75/hui-store.git"
+  },
+  "author": "zy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuezhao75/hui-store/issues"
+  },
+  "homepage": "https://github.com/yuezhao75/hui-store#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "less-plugin-autoprefix": "^1.5.1",
+    "postcss-loader": "^1.0.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
+  }
+}
