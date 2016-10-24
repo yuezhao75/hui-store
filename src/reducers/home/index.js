@@ -3,37 +3,25 @@
 import * as actions from '../../actions/home';
 //对页面prop 数据进行管理
 const initialState = {
-    img: [],
-    listLoading: false,
-    name: [],
+    logo: [],
+    goods:[],
+    bg:[]
 };
 export default function index(state = initialState, action = {}) {
 
     switch (action.type) {
-        case actions.GET_HOMEM_FAILED:
+        case actions.GET_HOME_FAILED:
             return Object.assign({}, state, {
-                img: action.data
+                logo: action.data.logo,
+                goods: action.data.goods,
+                bg: action.data.bg
             });
 
-        case actions.GET_HOMEM_SUCCESS:
+        case actions.GET_HOME_SUCCESS:
             return Object.assign({}, state, {
-                img: action.data
-            });
-
-        case actions.GET_HOMEN_SUCCESS:
-            return Object.assign({}, state, {
-                name: action.data
-            });
-
-        case actions.GET_HOMEN_SUCCESS:
-            return Object.assign({}, state, {
-                name: action.data
-            });
-
-        case actions.GET_HOMEM_FAILED:
-        case actions.GET_HOMEN_FAILED:
-            return Object.assign({}, state, {
-                listLoading: false
+                logo: action.data.logo,
+                goods: action.data.goods,
+                bg: action.data.bg
             });
         default:
             return state;

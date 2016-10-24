@@ -13,7 +13,7 @@ class Home extends React.Component {
     }
     componentDidMount(){
         var { dispatch, home} = this.props;
-        dispatch(actions.getHomeMessage());
+        dispatch(actions.getHome());
     }
     handleClick(){
         var { dispatch } = this.props;
@@ -22,23 +22,10 @@ class Home extends React.Component {
 
     render() {
         var { dispatch, home } = this.props;
-        const IMAGE_DATA = [
-            {
-                src: require('../../../img/bg1.jpg'),
-                alt: 'images-1',
-                url: 'http://www.baidu.com'
-            },
-            {
-                src: require('../../../img/bg2.jpg'),
-                alt: 'images-2',
-                url: 'http://www.baidu.com'
-            },
-            {
-                src: require('../../../img/bg3.jpg'),
-                alt: 'images-3',
-                url: 'http://www.baidu.com'
-            },
-        ];
+        const IMAGE_DATA = home.bg;
+        const logos = home.logo;
+        const goods = home.goods;
+
         return (
             <div className="g-home">
                 <Slider
@@ -57,50 +44,22 @@ class Home extends React.Component {
                     </div>
                 </div>
                 <section className="g-goods">
-                    <div className="m-box">
-                        <div className="m-img">
-                            <img src="http://yanxuan.nosdn.127.net/d51656c7ab2401fb44383db47200d17a.jpg?imageView&quality=95&thumbnail=265x265" />
-                        </div>
-                        <div className="m-introduce">
-                            <h4 className="u-name">联想笔记本</h4>
-                            <div className="u-introduce">
-                                反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置
-                            </div>
-                        </div>
-                    </div>
-                    <div className="m-box">
-                        <div className="m-img">
-                            <img src="http://yanxuan.nosdn.127.net/d51656c7ab2401fb44383db47200d17a.jpg?imageView&quality=95&thumbnail=265x265" />
-                        </div>
-                        <div className="m-introduce">
-                            <h4 className="u-name">联想笔记本</h4>
-                            <div className="u-introduce">
-                                反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置
-                            </div>
-                        </div>
-                    </div>
-                    <div className="m-box">
-                        <div className="m-img">
-                            <img src="http://yanxuan.nosdn.127.net/d51656c7ab2401fb44383db47200d17a.jpg?imageView&quality=95&thumbnail=265x265" />
-                        </div>
-                        <div className="m-introduce">
-                            <h4 className="u-name">联想笔记本</h4>
-                            <div className="u-introduce">
-                                反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置
-                            </div>
-                        </div>
-                    </div>
-                    <div className="m-box">
-                        <div className="m-img">
-                            <img src="http://yanxuan.nosdn.127.net/d51656c7ab2401fb44383db47200d17a.jpg?imageView&quality=95&thumbnail=265x265" />
-                        </div>
-                        <div className="m-introduce">
-                            <h4 className="u-name">联想笔记本</h4>
-                            <div className="u-introduce">
-                                反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置反正一大堆配置
-                            </div>
-                        </div>
-                    </div>
+                    {
+                        goods.map((item, index) => {
+                            return <div className="m-box" key={index}>
+                                    <div className="m-img">
+                                        <img src={item.url} />
+                                    </div>
+                                    <div className="m-introduce">
+                                        <h4 className="u-name">{item.name}</h4>
+                                        <div className="u-introduce">
+                                            {item.introduce}
+                                        </div>
+                                        <div className="u-price">￥{item.price}</div>
+                                    </div>
+                                </div>
+                        })
+                    }
                 </section>
 
                 <div className="g-title">
@@ -110,14 +69,15 @@ class Home extends React.Component {
                     </div>
                 </div>
                 <section className="g-logo">
-                    <div className="m-logo">
-                        <img src="../../../img/iphone.jpg"/>
-                        <div className="u-logo-name">苹果</div>
-                    </div>
-                    <div className="m-logo">
-                        <img src="../../../img/dell.jpg"/>
-                        <div className="u-logo-name">DELL</div>
-                    </div>
+                    {
+                        logos.map((item, index ) => {
+                            return <div className="m-logo" key={index}>
+                                        <img src={item.url}/>
+                                        <div className="u-logo-name" >{item.name}</div>
+                                    </div>
+                        })
+                    }
+
                 </section>
             </div>
         )

@@ -1,0 +1,67 @@
+{
+  "status": "000000",
+  "message": "success",
+  "data": {
+    "bg":[
+      {
+        "src": "../img/bg1.jpg",
+        "alt": "images-1",
+        "url": "http://www.baidu.com"
+      },
+      {
+        "src": "../img/bg2.jpg",
+        "alt": "images-2",
+        "url": "http://www.baidu.com"
+      },
+      {
+        "src": "../img/bg3.jpg",
+        "alt": "images-3",
+        "url": "http://www.baidu.com"
+      }
+    ],
+    "logo":[
+      {
+        "url":"../img/iphone.jpg",
+        "name":"苹果"
+      },
+      {
+        "url":"../img/dell.jpg",
+        "name":"戴尔"
+      },
+      {
+        "url":"../img/hp.jpg",
+        "name":"惠普"
+      },
+      {
+        "url":"../img/sony.jpg",
+        "name":"索尼"
+      }
+    ],
+    "goods":[
+      {
+        "url":"../img/good1.jpg",
+        "name":"iphone 银色",
+        "introduce":"苹果(Apple) iPhone 6 16G 银色",
+        "price":"600"
+      },
+      {
+        "url":"../img/good2.jpg",
+        "name":"iphone 玫瑰金色",
+        "introduce":"苹果(Apple) iPhone 6s 16GB 玫瑰金色",
+        "price":"700"
+      },
+      {
+        "url":"../img/good3.jpg",
+        "name":"iphone 金色",
+        "introduce":"苹果(Apple) iPhone 6s Plus 64GB 金色",
+        "price":"800"
+      },
+      {
+        "url":"../img/good4.jpg",
+        "name":"iphone 深空灰色",
+        "introduce":"苹果(Apple) iPhone SE 64G 深空灰色",
+        "price":"900"
+      }
+    ]
+  }
+}

@@ -1,8 +1,7 @@
 'use strict';
 
 var api = {
-    homeM: ['/home','post'],
-    homeN: ['/homeN','post'],
+    home: ['/home','post'],
 };
 
 export default api;

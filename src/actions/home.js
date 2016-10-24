@@ -3,68 +3,33 @@
 import {Ajax, NameSpace} from '../servers/server';
 
 let ns = NameSpace('Home');
-export const GET_HOMEM_REQUEST = ns('GET_HOMEM_REQUEST');
-export const GET_HOMEM_SUCCESS = ns('GET_HOMEM_SUCCESS');
-export const GET_HOMEM_FAILED = ns('GET_HOMEM_FAILED');
+export const GET_HOME_REQUEST = ns('GET_HOME_REQUEST');
+export const GET_HOME_SUCCESS = ns('GET_HOME_SUCCESS');
+export const GET_HOME_FAILED = ns('GET_HOME_FAILED');
 
-export const GET_HOMEN_REQUEST = ns('GET_HOMEN_REQUEST');
-export const GET_HOMEN_SUCCESS = ns('GET_HOMEN_SUCCESS');
-export const GET_HOMEN_FAILED = ns('GET_HOMEN_FAILED');
-
-export function getHomeMessage(){
+export function getHome(){
 
     return (dispatch) => {
 
         dispatch({
-            type : GET_HOMEM_REQUEST,
+            type : GET_HOME_REQUEST,
             data : ""
         });
 
         Ajax({
-            api: 'homeM',
+            api: 'home',
             method: 'get',
             data: {}
         },json => {
 
             dispatch({
-                type : GET_HOMEM_SUCCESS,
+                type : GET_HOME_SUCCESS,
                 data : json.data
             });
 
         },json => {
             dispatch({
-                type : GET_HOMEM_FAILED,
-                data : json
-            });
-
-        });
-
-    }
-}
-
-export function getHomeName(){
-
-    return (dispatch) => {
-
-        dispatch({
-            type : GET_HOMEN_REQUEST,
-            data : ""
-        });
-
-        Ajax({
-            api: 'homeN',
-            method: 'get',
-            data: {}
-        },json => {
-
-            dispatch({
-                type : GET_HOMEN_SUCCESS,
-                data : json.data
-            });
-
-        },json => {
-            dispatch({
-                type : GET_HOMEN_FAILED,
+                type : GET_HOME_FAILED,
                 data : json
             });
 
