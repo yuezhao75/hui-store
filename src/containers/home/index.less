@@ -1,0 +1,85 @@
+.g-home{
+  box-sizing: border-box;
+  width: 1090px;
+  margin: 0 auto;
+  .g-title{
+    .m-title{
+      border-left: 8px solid #55a6fd;
+      padding-left: 20px;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: 700;
+      .u-en{
+        font-size: 22px;
+        position: relative;
+        bottom: -3px;
+        left: 10px;
+      }
+    }
+  }
+
+  .g-goods{
+    .m-box{
+      height: 350px;
+      width: 265px;
+      margin: 0 10px 50px 0;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      .m-img{
+        position: relative;
+        margin-bottom: 8px;
+        overflow: hidden;
+        img{
+          width: 245px;
+          height: 245px;
+          padding: 10px;
+        }
+      }
+      .m-introduce{
+        line-height: 1;
+        text-align: center;
+        font-size: 13px;
+        .u-name{
+          margin-bottom: 8px;
+          height: 20px;
+          line-height: 22px;
+        }
+        .u-introduce{
+          padding: 0 10px;
+        }
+      }
+    }
+    .m-box:last-of-type{
+      margin: 0 0 50px 0;
+    }
+    .m-box:hover{
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    }
+  }
+  .g-logo{
+    margin-bottom: 50px;
+    .m-logo{
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      width: 250px;
+      height: 250px;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      img{
+        width: 150px;
+        height:150px;
+        margin: 20px 0;
+      }
+      .u-logo-name{
+        font-size: 16px;
+      }
+    }
+    .m-logo:hover{
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    }
+  }
+}

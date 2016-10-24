@@ -1,8 +1,10 @@
+'use strict';
+
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import Home from './src/containers/home/home'
+import Home from './src/containers/home/index'
 import Header from './src/components/header/index'
 import createStore from './src/store/configureStore'
 import reducers from './src/reducers/';

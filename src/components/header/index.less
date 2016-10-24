@@ -1,14 +1,45 @@
-.g-header{
-  background: #000;
+body{
+  font-family: "Microsoft Yahei","微软雅黑",verdana;
+  color: #333;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
-.u-left{
-  float: left;
-}
-.u-right{
-  float: right;
-}
-.u-a{
-  font-size: 20px;
-  color: #fff;
-  margin-right: 40px;
+.g-hd{
+  height: 36px;
+  background-color: #333;
+  min-width: 1090px;
+  .m-nav{
+    .g-row{
+      width: 1090px;
+      margin-right: auto;
+      margin-left: auto;
+      color: #ccc;
+      .m-left{
+        float: left;
+        img{
+          width: 36px;
+          height: 36px;
+        }
+      }
+      .m-right{
+        float: right;
+        div{
+          display: inline-block;
+          vertical-align: top;
+        }
+        .f-login, .f-register {
+          margin-right: 20px;
+          color: #ccc;
+          line-height: 35px;
+          cursor: pointer;
+        }
+        .u-split{
+          margin: 10px 20px 10px 0;
+          height: 16px;
+          border-left: 1px solid #5c5c5c;
+        }
+      }
+    }
+  }
 }
