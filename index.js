@@ -4,8 +4,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import Home from './src/containers/home/index'
 import Header from './src/components/header/index'
+import Home from './src/containers/home/index'
+import GoodList from './src/containers/goodList/index'
 import createStore from './src/store/configureStore'
 import reducers from './src/reducers/';
 
@@ -17,6 +18,7 @@ render(
             <Route path="/" component={Header}>
                 <IndexRoute component={Home}/>
                 <Route path="/home" component={Home}/>
+                <Route path="/goodList" component={GoodList}/>
                 <Route path="*" component={Home}/>
             </Route>
         </Router>

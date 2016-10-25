@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/home';
@@ -9,7 +11,7 @@ import './index.less';
 
 class Home extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
     componentDidMount(){
         var { dispatch, home} = this.props;
@@ -27,11 +29,11 @@ class Home extends React.Component {
         const goods = home.goods;
 
         return (
-            <div className="g-home">
+            <div className="p-home">
                 <Slider
                     items={IMAGE_DATA}
                     speed={1.2}
-                    delay={2.1}
+                    delay={6.2}
                     pause={true}
                     autoplay={true}
                     dots={true}
@@ -46,7 +48,8 @@ class Home extends React.Component {
                 <section className="g-goods">
                     {
                         goods.map((item, index) => {
-                            return <div className="m-box" key={index}>
+                            return (
+                                <div className="m-box" key={index}>
                                     <div className="m-img">
                                         <img src={item.url} />
                                     </div>
@@ -58,6 +61,7 @@ class Home extends React.Component {
                                         <div className="u-price">￥{item.price}</div>
                                     </div>
                                 </div>
+                            )
                         })
                     }
                 </section>
@@ -71,10 +75,12 @@ class Home extends React.Component {
                 <section className="g-logo">
                     {
                         logos.map((item, index ) => {
-                            return <div className="m-logo" key={index}>
-                                        <img src={item.url}/>
-                                        <div className="u-logo-name" >{item.name}</div>
-                                    </div>
+                            return (
+                                <div className="m-logo" key={index}>
+                                    <img src={item.url}/>
+                                    <div className="u-logo-name" >{item.name}</div>
+                                </div>
+                            )
                         })
                     }
 

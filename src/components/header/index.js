@@ -13,7 +13,7 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="g-header">
                 <header className="g-hd">
                     <div className="m-nav">
                         <div className="g-row">
@@ -25,6 +25,43 @@ class Header extends React.Component {
                                 <div className="u-split"></div>
                                 <div className="f-register" onClick={this.register.bind(this)}>注册</div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="m-funTab">
+                        <div className="g-row">
+                            <a className="tab-logo" href="/" title="惠抢购"></a>
+                            <div className="m-inner">
+                                <div className="m-search">
+                                    <input className="u-input" type="text" placeholder="搜索你喜欢的商品"/>
+                                    <div className="u-button">搜索</div>
+                                </div>
+                            </div>
+                            <ul className="tab-nav">
+                                <li className="nav-item">
+                                    <Link className="u-link active" to="/home">主页</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/goodList">笔记本</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home">手机</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home">智能设备</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home">影音娱乐</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home">游戏设备</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home">平板电脑</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home">活动</Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </header>

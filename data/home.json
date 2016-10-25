@@ -6,17 +6,17 @@
       {
         "src": "../img/bg1.jpg",
         "alt": "images-1",
-        "url": "http://www.baidu.com"
+        "url": "#"
       },
       {
         "src": "../img/bg2.jpg",
         "alt": "images-2",
-        "url": "http://www.baidu.com"
+        "url": "#"
       },
       {
         "src": "../img/bg3.jpg",
         "alt": "images-3",
-        "url": "http://www.baidu.com"
+        "url": "#"
       }
     ],
     "logo":[
