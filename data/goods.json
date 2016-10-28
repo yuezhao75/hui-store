@@ -1,0 +1,30 @@
+{
+  "status": "000000",
+  "message": "success",
+  "data": [
+    {
+      "url":"../img/good1.jpg",
+      "name":"iphone 银色",
+      "introduce":"苹果(Apple) iPhone 6 16G 银色",
+      "price":"600"
+    },
+    {
+      "url":"../img/good2.jpg",
+      "name":"iphone 玫瑰金色",
+      "introduce":"苹果(Apple) iPhone 6s 16GB 玫瑰金色",
+      "price":"700"
+    },
+    {
+      "url":"../img/good3.jpg",
+      "name":"iphone 金色",
+      "introduce":"苹果(Apple) iPhone 6s Plus 64GB 金色",
+      "price":"800"
+    },
+    {
+      "url":"../img/good4.jpg",
+      "name":"iphone 深空灰色",
+      "introduce":"苹果(Apple) iPhone SE 64G 深空灰色",
+      "price":"900"
+    }
+  ]
+}

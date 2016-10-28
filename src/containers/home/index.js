@@ -14,16 +14,15 @@ class Home extends React.Component {
         super(props);
     }
     componentDidMount(){
-        var { dispatch, home} = this.props;
+        let { dispatch, home} = this.props;
         dispatch(actions.getHome());
     }
     handleClick(){
-        var { dispatch } = this.props;
-        dispatch(actions.getHomeName());
+
     }
 
     render() {
-        var { dispatch, home } = this.props;
+        let { home } = this.props;
         const IMAGE_DATA = home.bg;
         const logos = home.logo;
         const goods = home.goods;
@@ -46,6 +45,7 @@ class Home extends React.Component {
                     </div>
                 </div>
                 <section className="g-goods">
+                    <Link to="/goodList">
                     {
                         goods.map((item, index) => {
                             return (
@@ -64,6 +64,7 @@ class Home extends React.Component {
                             )
                         })
                     }
+                    </Link>
                 </section>
 
                 <div className="g-title">

@@ -47,6 +47,10 @@ class Slider extends React.Component {
         this.goPlay();
     }
 
+    componentWillUnmount(){
+        this.pausePlay();
+    }
+
     render() {
         let count = this.props.items.length;
 

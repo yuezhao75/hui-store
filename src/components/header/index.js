@@ -1,17 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 import Footer from '../footer/index';
 
 import './index.less';
 
 class Header extends React.Component {
     login(){
-        alert("登录成功！")
+        //this.props.history.pushState({passParam: true}, "/goodList");
+        //this.context.router.push('/new-path',123)
+        localStorage.uid = "zy";
     }
     register(){
         alert("注册成功！")
     }
     render() {
+        //var data = 123456;
+        //var a = "/goodList?id="+data;
         return (
             <div className="g-header">
                 <header className="g-hd">
@@ -38,28 +42,28 @@ class Header extends React.Component {
                             </div>
                             <ul className="tab-nav">
                                 <li className="nav-item">
-                                    <Link className="u-link active" to="/home">主页</Link>
+                                    <IndexLink to="/" className="u-link" activeClassName="active">主页</IndexLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/goodList">笔记本</Link>
+                                    <Link to="/goodList" className="u-link" activeClassName="active">笔记本</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/home">手机</Link>
+                                    <Link to="#" className="u-link">手机</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/home">智能设备</Link>
+                                    <Link to="#" className="u-link">智能设备</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/home">影音娱乐</Link>
+                                    <Link to="#" className="u-link">影音娱乐</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/home">游戏设备</Link>
+                                    <Link to="#" className="u-link">游戏设备</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/home">平板电脑</Link>
+                                    <Link to="#" className="u-link">平板电脑</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/home">活动</Link>
+                                    <Link to="#" className="u-link">活动</Link>
                                 </li>
                             </ul>
                         </div>
@@ -75,5 +79,9 @@ class Header extends React.Component {
 
     }
 }
+//
+//Header.contextTypes = {
+//    router: React.PropTypes.object.isRequired
+//};
 
 export default Header
